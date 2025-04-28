@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Get Involved - HopeHive</title>
+    <link rel="stylesheet" href="getInvolved.css">
+</head>
+
+<body>
+
+    <!-- Navigation Bar -->
+    <header>
+        <div class="logo">
+            <a href="home.html">
+                <img src="logo.png" alt="HopeHive Logo">
+            </a>
+        </div>
+        
+        <nav class="nav">
+            <div class="menu-toggle" id="mobile-menu">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </div>
+            
+            <ul class="nav-list" id="nav-list">
+                <li><a href="home.html" class="active"><img src="home_icon.png" class="nav-icon">HOME</a></li>
+                
+                <li class="dropdown">
+                    <a href="aboutUs.html" class="dropbtn">ABOUT US</a>
+                    <ul class="dropdown-content">
+                        <li><a href="#">History</a></li>
+                        <li><a href="#">Our Mission</a></li>
+                        <li><a href="#">Our Team</a></li>
+                    </ul>
+                </li>
+                
+                <li class="dropdown">
+                    <a href="campaign.html" class="dropbtn">CAMPAIGNS</a>
+                    <ul class="dropdown-content">
+                        <li><a href="#">Act Now</a></li>
+                        <li><a href="#">Our Projects</a></li>
+                        <li><a href="#">Support Causes</a></li>
+                    </ul>
+                </li>
+                
+                <li class="dropdown">
+                    <a href="getInvolved.html" class="dropbtn">GET INVOLVED</a>
+                    <ul class="dropdown-content">
+                        <li><a href="#">Volunteer</a></li>
+                        <li><a href="#">Donate</a></li>
+                        <li><a href="#">Partnerships</a></li>
+                    </ul>
+                </li>
+
+                <li><a href="contactUs.html">CONTACT US</a></li>
+            </ul>
+        </nav>
+    </header>
+
+
+    <!-- Get Involved Section -->
+    <h1 style="text-align: center;">Get Involved</h1>
+        <p style="text-align: center;">Your support can change lives. Explore ways to contribute to our cause.</p>
+
+    <!-- Main Content Section -->
+    <main>
+        <!-- Volunteering Section -->
+         <section class="involvement-option">
+            <div class="option-content">
+                <h2>Volunteer With Us</h2>
+                <p>Become part of our dedicated volunteer team and create meaningful change in your community, with flexible opportunities ranging from short-term projects to long-term commitments that align with your schedule and passions.</p>
+                <ul>
+                    <li>Support local initiatives by organizing community clean-ups and workshops.</li>
+                    <li>Provide companionship and assistance to seniors and vulnerable individuals.</li>
+                    <li>Teach valuable skills or lead workshops to empower others in your area.</li>
+                </ul>
+                <!-- Open Form Button -->
+                 <button class="cta-button" onclick="openForm()">Sign Up to Volunteer</button>
+                 <div id="volunteerModal" style="display:none; position:fixed; top:30%; left:35%; width:30%; background:#EBE5C2; padding:20px; border:2px solid #333; z-index:1000; border-radius:12px; box-shadow: 0 0 10px rgba(0,0,0,0.2);">
+                    <h3 style="text-align:center;">Sign Up To Volunteer</h3>
+                    <form action="https://dev.fare4z.com" method="POST" name="Contact-Us" target="_blank" onsubmit="return submitForm()">
+                        <div class="contact-form" style="display: flex; flex-direction: column;">
+
+                            <label for="volName">Full Name</label>
+                            <input type="text" id="volName" name="name" placeholder="Enter your name" required style="padding: 8px; margin-bottom: 10px;">
+                            
+                            <label for="volEmail">Email Address</label>
+                            <input type="email" id="volEmail" name="email" placeholder="Enter your email" required style="padding: 8px; margin-bottom: 10px;">
+
+                            <label for="volPassword">Password</label>
+                            <input type="password" id="volPassword" name="password" placeholder="Enter a password" required style="padding: 8px; margin-bottom: 10px;">
+                            
+                            <button type="submit" style="background-color:#333; color:white; padding:10px 18px; border:none; border-radius:6px; cursor:pointer;">Submit</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+            <div class="option-image">
+                <img src="volunteer.jpg" alt="Volunteer Image">
+            </div>
+        </section>
+
+        <!-- Donations Section -->
+         <section class="involvement-option">
+            <div class="option-content">
+                <h2>Make a Donation</h2>
+                <p>Your generous financial contributions play a vital role in enabling us to fund critical projects, deliver essential resources, and offer life-changing support to individuals and communities in need, as every penny you donate brings us closer to creating a lasting and meaningful impact.</p>
+                <ul>
+                    <li>One-time or recurring donations.</li>
+                    <li>Sponsor a specific project or campaign.</li>
+                    <li>Donate in honor or memory of a loved one.</li>
+                </ul>
+                <a href="#" class="cta-button" onclick="handleDonation()">Donate Now</a>
+            </div>
+            <div class="option-image">
+                <img src="donation.jpg" alt="Donation Image">
+            </div>
+        </section>
+        
+        <!-- Partnerships Section -->
+         <section class="involvement-option">
+            <div class="option-content">
+                <h2>Become a Partner</h2>
+                <p>Partner with us to expand and amplify our impact, as we actively collaborate with businesses, organizations, and individuals who share our vision, working together to drive innovative solutions, foster sustainable growth, and create meaningful, lasting change in the lives of those we serve.</p>
+                <ul>
+                    <li>Corporate sponsorships and collaborations.</li>
+                    <li>In-kind donations and resource sharing.</li>
+                    <li>Joint initiatives and community programs.</li>
+                </ul>
+                <a href="#" class="cta-button" onclick="togglePartnershipInfo()">Learn More About Partnerships</a>
+                <div id="partnershipInfo" style="display: none; margin-top: 20px; background-color: #EBE5C2; padding: 20px; border-radius: 10px;">
+                    <h3>Partnership Opportunities</h3>
+                    <p>We’re looking for meaningful collaborations with organizations and individuals who are passionate about creating lasting impact. Whether through sponsorships, shared events, or knowledge exchange, partnerships help us expand our reach and bring greater good to communities in need.</p>
+                    <ul>
+                        <li>Co-host fundraising and awareness campaigns</li>
+                        <li>Collaborate on education and outreach programs</li>
+                        <li>Join us in building a sustainable support system</li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="option-image">
+                <img src="partnership.png" alt="Partnership Image">
+            </div>
+        </section>
+    </main>
+</section>
+
+<!-- Footer Section -->
+ <footer class="footer-cta">
+    <p>Join us in making a difference! Learn how you can support our mission.</p>
+    <a href="contactUs.html" onclick="goToContactUs()">CONTACT US ➔</a>
+</footer>
+
+<!-- JavaScript Files -->
+<script src="getInvolved.js"></script>
+
+</body>
+</html>
